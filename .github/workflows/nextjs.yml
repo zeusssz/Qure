@@ -26,18 +26,17 @@ jobs:
       - name: Set working directory to /app
         run: |
           cd app
-          # Confirm we are in the correct directory
-          ls -al
+          ls -al # Check contents of /app to verify presence of package.json or yarn.lock
 
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          cd app # Ensure we're in the /app directory
-          if [ -f "yarn.lock" ]; then
+          # This will ensure we're in the /app directory and can detect the package manager
+          if [ -f "app/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
-          elif [ -f "package.json" ]; then
+          elif [ -f "app/package.json" ]; then
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
