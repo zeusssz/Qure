@@ -7,6 +7,7 @@ import SymptomSearch from './components/SymptomSearch'
 import { Squiggle, Circle, Wave } from './components/Decorative'
 import { SquigglyLines } from './components/SquigglyLines'
 
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-white to-green-50 overflow-hidden relative">
