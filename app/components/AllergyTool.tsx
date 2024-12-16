@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { AlertCircle } from 'lucide-react'
 import { Button } from '../../components/ui/button'
-import { Checkbox } from '@/components/ui/checkbox'
+import { Checkbox } from '../../components/ui/checkbox'
 
 export default function AllergyTool() {
   const [allergies, setAllergies] = useState<{[key: string]: boolean}>({
