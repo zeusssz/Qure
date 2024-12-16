@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { CalendarIcon } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Calendar } from '@/components/ui/calendar'
+import { Button } from '../../components/ui/button'
+import { Calendar } from '../../components/ui/calendar'
 
 export default function MedicalCalendar() {
   const [date, setDate] = useState<Date | undefined>(new Date())
